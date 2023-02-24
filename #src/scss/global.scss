@@ -1,0 +1,49 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: block;
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+}
+
+.callback {
+  font-size: 0.875em;
+  padding: 12px 26px;
+  border: 2px solid $accent;
+  border-radius: 40px;
+  transition: color 0.3s, background-color 0.3s;
+
+  &:hover {
+    color: $white;
+    background-color: $accent;
+  }
+}
+
+.phone {
+  font-size: 1em;
+  margin-right: 40px;
+}
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 650px) {
+  body {
+    font-size: 12px;
+  }
+
+  .callback {
+    padding: 8px 15px;
+  }
+}

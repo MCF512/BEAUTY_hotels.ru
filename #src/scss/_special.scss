@@ -1,0 +1,238 @@
+.special {
+  background-color: $gray;
+  padding-top: 80px;
+  padding-bottom: 130px;
+
+  &__wrapper {
+    margin-bottom: 100px;
+  }
+
+  &__title {
+    display: block;
+    font-size: 1.5em;
+    margin-bottom: 38px;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__show__more {
+    display: none;
+    margin: 0 auto;
+    background-color: $accent;
+    color: $white;
+    padding: 10px 21px;
+    border-radius: 30px;
+    font-size: 0.875em;
+  }
+
+  &__card {
+    background-color: $white;
+    max-width: 255px;
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__img {
+      margin-bottom: 20px;
+    }
+
+    &__info {
+      font-size: 0.875em;
+      font-weight: 400;
+      text-align: center;
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+
+    &__price {
+      font-weight: 500;
+      font-size: 1.3125em;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    &__buy {
+      background-color: $accent;
+      padding: 7px 38px;
+      color: $white;
+      border-radius: 30px;
+      border: 2px solid $accent;
+      font-size: 0.875em;
+      transition: color 0.3s, background-color 0.3s;
+
+      &:hover {
+        color: #000;
+        background-color: $white;
+      }
+    }
+  }
+
+  &__promo {
+    display: flex;
+    justify-content: space-between;
+
+    &__gifts {
+      background-color: $accent;
+      padding: 35px 40px;
+      color: $white;
+      max-width: 540px;
+      width: 100%;
+      position: relative;
+
+      &::after {
+        content: url(../img/email.svg);
+        position: absolute;
+        right: 45px;
+        top: 45px;
+      }
+    }
+
+    &__shops {
+      background-color: $accent;
+      padding: 35px 40px;
+      color: $white;
+      max-width: 540px;
+      width: 100%;
+      position: relative;
+
+      &::after {
+        content: url(../img/car.svg);
+        position: absolute;
+        right: 45px;
+        top: 62px;
+      }
+    }
+
+    &__content {
+      max-width: 250px;
+    }
+
+    &__title {
+      margin-bottom: 25px;
+    }
+
+    &__text {
+      font-size: 0.875em;
+      line-height: 1.4;
+      margin-bottom: 25px;
+
+      &--shops {
+        max-width: 145px;
+      }
+    }
+
+    &__email {
+      width: 100%;
+      padding: 10px 25px;
+      border-radius: 30px;
+
+      &::placeholder {
+        color: #c4c4c4;
+      }
+    }
+
+    &__map {
+      font-size: 0.875em;
+      padding: 10px 25px;
+      border: 2px solid $white;
+      border-radius: 30px;
+      transition: color 0.3s, background-color 0.3s;
+
+      &:hover {
+        background-color: $white;
+        color: #000;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .special {
+    padding-top: 30px;
+    padding-bottom: 50px;
+
+    &__wrapper {
+      margin-bottom: 30px;
+    }
+
+    &__cards {
+      justify-content: space-around;
+    }
+
+    &__show__more {
+      display: block;
+    }
+
+    &__card {
+
+      &:nth-child(4) {
+        display: none;
+      }
+    }
+
+    &__promo {
+      flex-direction: column;
+      align-items: center;
+
+      &__gifts {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .special {
+
+    &__title {
+      text-align: center;
+    }
+
+    &__cards {
+      margin: 0 auto;
+      justify-content: space-between;
+      max-width: 540px;
+      margin-bottom: 20px;
+    }
+
+    &__card {
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .special {
+
+    &__cards {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+
+    &__card {
+      margin-bottom: 20px;
+    }
+
+    &__promo {
+
+      &__gifts,
+      &__shops {
+        max-width: 330px;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+}
